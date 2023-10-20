@@ -21,3 +21,30 @@
     color: rgba(0, 0, 0, 1);
     }
 }
+.top-line {
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.new-task {
+  margin-left: 22px;
+  /* margin-top: 42px; */
+  font-size: 16px;
+  font-family: "Inter";
+  font-weight: 600;
+  color: rgba(255, 255, 255, 1);
+  width: 202px;
+  border-radius: 12px;
+  background: #48c15b;
+  border: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  float: right;
+}
+.table-body {
+  border-radius: 10px;
+border: 1px solid #D2D2D2;
+width: 1263px;
+height: 713px;
+flex-shrink: 0;
+
+}
