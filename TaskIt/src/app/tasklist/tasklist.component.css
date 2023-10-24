@@ -54,4 +54,9 @@ width: 20%;
 padding: 15px;
 margin: 5px;
 color: dimgray;
+font-weight: 600;
+}
+.list-items
+{
+  border: 1px solid darkgray;
 }
