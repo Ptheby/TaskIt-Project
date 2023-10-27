@@ -7,11 +7,15 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TasklistComponent } from './tasklist/tasklist.component';
 
+import { TaskFormModalComponent } from './tasklist/task-form-modal/task-form-modal.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    TasklistComponent
+    TasklistComponent,
+
+    TaskFormModalComponent
   ],
   imports: [
     BrowserModule

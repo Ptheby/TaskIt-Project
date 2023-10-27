@@ -1,0 +1,12 @@
+.backdrop {
+  /* stick to the screen */
+  position: fixed;
+  /* top, left, right, bottom is going to cover all corners of the screen */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: rgba(0, 0, 0, 0.54); /* positioning the element on top */
+  z-index: 10;
+}
