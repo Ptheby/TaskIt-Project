@@ -9,4 +9,23 @@
 
   background: rgba(0, 0, 0, 0.54); /* positioning the element on top */
   z-index: 10;
+
+}
+.modal-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  border-radius: 9px;
+  background: #FFF;
+  z-index: 11;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.modal-content {
+
 }

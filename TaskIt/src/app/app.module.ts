@@ -8,6 +8,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { TasklistComponent } from './tasklist/tasklist.component';
 
 import { TaskFormModalComponent } from './tasklist/task-form-modal/task-form-modal.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { TaskFormModalComponent } from './tasklist/task-form-modal/task-form-mod
     TaskFormModalComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

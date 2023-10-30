@@ -24,7 +24,8 @@
         </div>
       </div>
 
-      <button class="new-task">Add New Task</button>
+      <!--  -->
+      <button class="new-task" (click)="onOpenModal()" >Add New Task</button>
     </div>
     <div class="table-body">
       <div class="task-list-row" style="display: flex">
@@ -37,6 +38,7 @@
     </div>
   </div>
   <!-- task form modal  -->
+  <!-- isOpenModal dictates if modal shows -->
   <app-task-form-modal *ngIf="isOpenModal"></app-task-form-modal>
 </div>
 

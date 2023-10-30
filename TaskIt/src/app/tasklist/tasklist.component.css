@@ -19,7 +19,7 @@
     font-family: "Inter";
     font-weight: Semi Bold;
     color: rgba(0, 0, 0, 1);
-    }
+  }
 }
 .top-line {
   gap: 10px;
@@ -42,21 +42,18 @@
 }
 .table-body {
   border-radius: 10px;
-border: 1px solid #D2D2D2;
-width: 1263px;
-height: 713px;
-flex-shrink: 0;
-
+  border: 1px solid #d2d2d2;
+  /* width: 1263px; */
+  /* height: 713px; */
+  flex-shrink: 0;
 }
-.task-list-headers
-{
-width: 20%;
-padding: 15px;
-margin: 5px;
-color: dimgray;
-font-weight: 600;
+.task-list-headers {
+  width: 20%;
+  padding: 15px;
+  margin: 5px;
+  color: dimgray;
+  font-weight: 600;
 }
-.list-items
-{
+.list-items {
   border: 1px solid darkgray;
 }
