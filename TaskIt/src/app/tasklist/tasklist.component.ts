@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
 export class TasklistComponent {
   // properties
   isOpenModal: boolean = true;
+  // currentTasks=[
+  //   {title:string,
+  //   }
+  // ]
 
   // methods
 

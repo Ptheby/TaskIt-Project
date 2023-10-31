@@ -15,7 +15,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     SidebarComponent,
     TasklistComponent,
-
     TaskFormModalComponent
   ],
   imports: [
