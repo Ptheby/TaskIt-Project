@@ -16,6 +16,6 @@ export class TasklistComponent {
   // methods
 
   onOpenModal() {
-this.isOpenModal= true;
+    this.isOpenModal = true;
   }
 }
