@@ -15,14 +15,17 @@ import { Observable } from 'rxjs';
 export class TaskFormModalComponent implements OnInit {
   // in strict mode, it forces you to assign properties to values
   newTaskForm: FormGroup = new FormGroup({});
+  myDate = new Date()
 
   constructor() {}
 
   ngOnInit(): void {
-    this.newTaskForm = new FormGroup({
+
+
+  this.newTaskForm = new FormGroup({
       title: new FormControl('Title', Validators.required),
       description: new FormControl('Description', Validators.required),
-      dueDate: new FormControl(null, Validators.required),
+      dueDate: new FormControl(this.myDate, Validators.required),
       priority: new FormControl('Medium', Validators.required),
       status: new FormControl('To Do', Validators.required),
     });
@@ -32,6 +35,6 @@ export class TaskFormModalComponent implements OnInit {
   };
 
   cancelAdd() {
-    
+
   }
 }
