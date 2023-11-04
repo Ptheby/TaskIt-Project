@@ -25,7 +25,7 @@ export class TaskFormModalComponent implements OnInit {
   this.newTaskForm = new FormGroup({
       title: new FormControl('Title', Validators.required),
       description: new FormControl('Description', Validators.required),
-      dueDate: new FormControl(this.myDate, Validators.required),
+      dueDate: new FormControl("Due Date", Validators.required),
       priority: new FormControl('Medium', Validators.required),
       status: new FormControl('To Do', Validators.required),
     });
