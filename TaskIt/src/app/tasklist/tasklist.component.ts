@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class TasklistComponent {
   // properties
-  isOpenModal: boolean = true;
+  isOpenModal: boolean = false;
   // currentTasks=[
   //   {title:string,
   //   }
@@ -16,6 +16,6 @@ export class TasklistComponent {
   // methods
 
   onOpenModal() {
-this.isOpenModal= true;
+this.isOpenModal= !this.isOpenModal;
   }
 }
