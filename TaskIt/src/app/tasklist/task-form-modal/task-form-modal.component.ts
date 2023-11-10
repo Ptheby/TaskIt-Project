@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { TasklistComponent } from '../tasklist.component';
 import {
   FormBuilder,
   FormGroup,
   FormControl,
   Validators,
 } from '@angular/forms';
-import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-task-form-modal',
@@ -35,6 +36,6 @@ export class TaskFormModalComponent implements OnInit {
   };
 
   cancelAdd() {
-
+    
   }
 }

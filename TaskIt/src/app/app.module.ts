@@ -10,6 +10,7 @@ import { TasklistComponent } from './tasklist/tasklist.component';
 import { TaskFormModalComponent } from './tasklist/task-form-modal/task-form-modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { KanbanBoardComponent } from './kanban-board/kanban-board.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { KanbanBoardComponent } from './kanban-board/kanban-board.component';
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
