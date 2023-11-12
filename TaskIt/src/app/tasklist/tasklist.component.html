@@ -27,71 +27,47 @@
       <!--  -->
       <button class="new-task" (click)="onOpenModal()">Add New Task</button>
     </div>
-    <!-- <div class="table-body">
+    <div class="table-headers">
      <div class="task-list-row" style="display: flex">
         <div class="task-list-headers">Title</div>
         <div class="task-list-headers">Due Date</div>
         <div class="task-list-headers">Priority</div>
         <div class="task-list-headers">Status</div>
         <div class="task-list-headers">Actions</div>
-      </div> -->
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">
-Title
-      </th>
-      <th scope="col">
-Due Date
-      </th>
-      <th scope="col">
-Priority
-      </th>
-      <th scope="col">
-Status
-      </th>
-      <th scope="col">
-Actions
-      </th>
-
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="list-group" *ngFor="let task of tasks; let i=index">
-      <td>{{task.title}}</td>
-      <td>{{task.dueDate | date : "MM/dd"}}</td>
-      <td>{{task.priority}}</td>
-      <td>{{task.status}}</td>
+      </div>
 
 
-
-      <!-- <ul class="list-group">
-        <a
-          class="list-group-item"
-          style="cursor: pointer"
-          *ngFor="let ingredient of ingredients; let i = index"
-          (click)="editOpenTask(i)"
-        >
-          {{ ingredient.name }} ({{ ingredient.amount }})
-        </a> -->
-
-
-
-
-
-
-
-
-
-
-
-    </tr>
-  </tbody>
-</table>
-    </div>
+      <div class="table-headers">
+        <div class="task-list-row" *ngFor="let task of tasks; let i = index" style="display: flex;">
+           <div style="color: black;" class="task-list-headers list-items">{{ task.title }}</div>
+           <div style="color: black;"class="task-list-headers list-items">{{ task.dueDate | date : "MM/dd" }}</div>
+           <div style="color: black;" class="task-list-headers list-items">{{ task.priority }}</div>
+           <div style="color: black;" class="task-list-headers list-items">{{ task.status }}</div>
+  
+         </div>
+       <!-- <table class="table"> -->
+    <!-- <table class="table"> -->
+      <!-- <thead style="display: flexbox">
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Due Date</th>
+          <th scope="col">Priority</th>
+          <th scope="col">Status</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead> -->
+      <!-- <tbody>
+        <tr class="list-group" *ngFor="let task of tasks; let i = index">
+          <td>{{ task.title }}</td>
+          <td>{{ task.dueDate | date : "MM/dd" }}</td>
+          <td>{{ task.priority }}</td>
+          <td>{{ task.status }}</td>
+        </tr>
+      </tbody>
+    </table> -->
   </div>
+</div>
 
-  <!-- task form modal  -->
-  <!-- isOpenModal dictates if modal shows -->
-  <app-task-form-modal *ngIf="isOpenModal"></app-task-form-modal>
-
+<!-- task form modal  -->
+<!-- isOpenModal dictates if modal shows -->
+<app-task-form-modal *ngIf="isOpenModal"></app-task-form-modal>

@@ -5,7 +5,7 @@ import { Task } from '../tasklist/task.model';
   providedIn: 'root'
 })
 export class TaskService {
-tasks:Task[]=[{title:'Mow',description:'Mow Lawn',priority:'Low',status:'To Do',dueDate: new Date('11/11/2023')}]
+tasks:Task[]=[{title:'',description:'',priority:'',status:'',dueDate: new Date('11/11/2023')}]
   constructor() { }
 
   //read
@@ -14,7 +14,7 @@ getTasks() {
 }
 
 addTask() {
- tasks = this.newTaskForm
+
 }
 
 deleteTask() {

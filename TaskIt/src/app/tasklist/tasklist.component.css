@@ -40,7 +40,7 @@
   padding-bottom: 15px;
   float: right;
 }
-.table-body {
+.table-headers {
   border-radius: 10px;
   border: 1px solid #d2d2d2;
   /* width: 1263px; */
@@ -51,9 +51,9 @@
   width: 20%;
   padding: 15px;
   margin: 5px;
-  color: dimgray;
+  color: rgb(119, 117, 117);
   font-weight: 600;
 }
-.list-items {
-  border: 1px solid darkgray;
-}
+/* .list-items {
+  /* border: 1px solid darkgray; */
+

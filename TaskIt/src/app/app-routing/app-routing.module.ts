@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TasklistComponent } from '../tasklist/tasklist.component';
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 
 const appRoutes: Routes = [
@@ -14,8 +14,10 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
-  ]
+    RouterModule.forRoot(appRoutes)],
+  exports:[RouterModule]
+
+
 })
 export class AppRoutingModule {
 

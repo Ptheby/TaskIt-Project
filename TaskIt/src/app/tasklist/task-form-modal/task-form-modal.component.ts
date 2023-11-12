@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { TasklistComponent } from '../tasklist.component';
+
 import {
-  FormBuilder,
+
   FormGroup,
   FormControl,
   Validators,
-  Form,
+
 } from '@angular/forms';
+import { Task } from '../task.model';
 
 
 @Component({
@@ -27,12 +28,13 @@ export class TaskFormModalComponent implements OnInit {
   this.newTaskForm = new FormGroup({
       title: new FormControl('Title', Validators.required),
       description: new FormControl('Description', Validators.required),
-      dueDate: new FormControl("Due Date", Validators.required),
+      dueDate: new FormControl('Due Date', Validators.required),
       priority: new FormControl('Medium', Validators.required),
       status: new FormControl('To Do', Validators.required),
     });
   }
   onSubmit() {
+    // this.tasks
 console.log(this.newTaskForm)
   };
 
