@@ -1,24 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Task } from './task.model';
+import { TaskService } from '../shared/task.service';
 
 @Component({
   selector: 'app-tasklist',
   templateUrl: './tasklist.component.html',
   styleUrls: ['./tasklist.component.css'],
 })
-export class TasklistComponent {
+export class TasklistComponent implements OnInit{
+tasks:Task[]= []
+
+  constructor (private taskService: TaskService) {}
 
 
-  constructor () {}
-
-task1= new Task ('Lawn', 'Mow Lawn',new Date(),'high','done')
+  ngOnInit(): void {
+this.tasks=this.taskService.getTasks();
+console.log(this.tasks)
+  }
 
   // properties
   isOpenModal: boolean = false;
-  activeList=  Task['']=[];
+
 
 
   onOpenModal() {
 this.isOpenModal= !this.isOpenModal;
+
   }
 }

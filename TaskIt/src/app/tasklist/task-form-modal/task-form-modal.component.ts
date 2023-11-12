@@ -5,6 +5,7 @@ import {
   FormGroup,
   FormControl,
   Validators,
+  Form,
 } from '@angular/forms';
 
 
@@ -32,10 +33,10 @@ export class TaskFormModalComponent implements OnInit {
     });
   }
   onSubmit() {
-
+console.log(this.newTaskForm)
   };
 
   cancelAdd() {
-    
+
   }
 }
