@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from './task.model';
 import { TaskService } from '../shared/task.service';
+import { TaskFormModalComponent } from './task-form-modal/task-form-modal.component';
 
 @Component({
   selector: 'app-tasklist',
@@ -8,7 +9,8 @@ import { TaskService } from '../shared/task.service';
   styleUrls: ['./tasklist.component.css'],
 })
 export class TasklistComponent implements OnInit{
-tasks:Task[]= []
+tasks:Task[]= [];
+
 
   constructor (private taskService: TaskService) {}
 
