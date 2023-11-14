@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit } from '@angular/core';
 
 import {
 
@@ -8,6 +10,7 @@ import {
 
 } from '@angular/forms';
 import { Task } from '../task.model';
+import { TaskService } from 'src/app/shared/task.service';
 
 
 @Component({
@@ -20,22 +23,23 @@ export class TaskFormModalComponent implements OnInit {
   newTaskForm: FormGroup = new FormGroup({});
   myDate = new Date()
 
-  constructor() {}
+  constructor(private taskService:TaskService) {}
 
   ngOnInit(): void {
 
 
   this.newTaskForm = new FormGroup({
-      title: new FormControl('Title', Validators.required),
-      description: new FormControl('Description', Validators.required),
-      dueDate: new FormControl('Due Date', Validators.required),
-      priority: new FormControl('Medium', Validators.required),
-      status: new FormControl('To Do', Validators.required),
+      title: new FormControl(null, Validators.required),
+      description: new FormControl(null, Validators.required),
+      dueDate: new FormControl(null, Validators.required),
+      priority: new FormControl(null, Validators.required),
+      status: new FormControl(null, Validators.required),
     });
   }
   onSubmit() {
-    // this.tasks
-console.log(this.newTaskForm)
+
+  this.taskService.addTask(this.newTaskForm.value)
+console.log(this.newTaskForm.value)
   };
 
   cancelAdd() {

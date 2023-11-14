@@ -5,7 +5,7 @@ import { Task } from '../tasklist/task.model';
   providedIn: 'root'
 })
 export class TaskService {
-tasks:Task[]=[{title:'',description:'',priority:'',status:'',dueDate: new Date('11/11/2023')}]
+tasks:Task[]=[]
   constructor() { }
 
   //read
@@ -13,8 +13,8 @@ getTasks() {
   return this.tasks
 }
 
-addTask() {
-
+addTask(newTask) {
+this.tasks.push(newTask)
 }
 
 deleteTask() {
