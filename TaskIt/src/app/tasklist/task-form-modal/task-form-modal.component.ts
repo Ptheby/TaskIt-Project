@@ -1,19 +1,8 @@
-import {
-  Component,
-  OnInit,
-EventEmitter,
-Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
-import {
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
-  FormGroup,
-  FormControl,
-  Validators,
-
-} from '@angular/forms';
-import { Task } from '../task.model';
 import { TaskService } from 'src/app/shared/task.service';
-
 
 @Component({
   selector: 'app-task-form-modal',
@@ -21,19 +10,17 @@ import { TaskService } from 'src/app/shared/task.service';
   styleUrls: ['./task-form-modal.component.css'],
 })
 export class TaskFormModalComponent implements OnInit {
-  @Output() closeChild:EventEmitter<void>= new EventEmitter<void>();
+  @Output() closeChild: EventEmitter<void> = new EventEmitter<void>();
 
   // in strict mode, it forces you to assign properties to values
   newTaskForm: FormGroup = new FormGroup({});
   myDate = new Date();
-  closeModal= false;
+  closeModal = false;
 
-  constructor(private taskService:TaskService) {}
+  constructor(private taskService: TaskService) {}
 
   ngOnInit(): void {
-
-
-  this.newTaskForm = new FormGroup({
+    this.newTaskForm = new FormGroup({
       title: new FormControl(null, Validators.required),
       description: new FormControl(null, Validators.required),
       dueDate: new FormControl(null, Validators.required),
@@ -42,13 +29,11 @@ export class TaskFormModalComponent implements OnInit {
     });
   }
   onSubmit() {
-
-  this.taskService.addTask(this.newTaskForm.value)
-console.log(this.newTaskForm.value)
-  };
+    this.taskService.addTask(this.newTaskForm.value);
+    console.log(this.newTaskForm.value);
+  }
 
   cancelAdd() {
-     this.closeChild.emit();
-
+    this.closeChild.emit();
   }
 }

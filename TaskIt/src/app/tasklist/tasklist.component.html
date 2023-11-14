@@ -70,4 +70,4 @@
 
 <!-- task form modal  -->
 <!-- isOpenModal dictates if modal shows -->
-<app-task-form-modal *ngIf="isOpenModal" (closeChild)="onOpenModal()"></app-task-form-modal>
+<app-task-form-modal *ngIf="!isOpenModal" (closeChild)="onOpenModal()"></app-task-form-modal>
