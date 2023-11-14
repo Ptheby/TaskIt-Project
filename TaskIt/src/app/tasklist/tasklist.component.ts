@@ -5,6 +5,7 @@ import { TaskFormModalComponent } from './task-form-modal/task-form-modal.compon
 
 @Component({
   selector: 'app-tasklist',
+  
   templateUrl: './tasklist.component.html',
   styleUrls: ['./tasklist.component.css'],
 })

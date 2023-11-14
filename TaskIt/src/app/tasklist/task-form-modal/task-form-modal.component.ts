@@ -1,6 +1,8 @@
 import {
   Component,
-  OnInit } from '@angular/core';
+  OnInit,
+EventEmitter,
+Output } from '@angular/core';
 
 import {
 
@@ -19,9 +21,12 @@ import { TaskService } from 'src/app/shared/task.service';
   styleUrls: ['./task-form-modal.component.css'],
 })
 export class TaskFormModalComponent implements OnInit {
+  @Output() closeChild:EventEmitter<void>= new EventEmitter<void>();
+
   // in strict mode, it forces you to assign properties to values
   newTaskForm: FormGroup = new FormGroup({});
-  myDate = new Date()
+  myDate = new Date();
+  closeModal= false;
 
   constructor(private taskService:TaskService) {}
 
@@ -43,6 +48,7 @@ console.log(this.newTaskForm.value)
   };
 
   cancelAdd() {
+     this.closeChild.emit();
 
   }
 }
