@@ -1,0 +1,60 @@
+<div class="backdrop"></div>
+<div class="modal-container">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>Add New Task</h3>
+    </div>
+    <div class="modal-body"></div>
+    <form [formGroup]="newTaskForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <input
+          type="text"
+          formControlName="title"
+          placeholder="Title"
+          id="title"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          placeholder="Description"
+          formControlName="description"
+          id="description"
+          class="form-control"
+        />
+      </div>
+      <div class="form-control">
+        <div class="Date">
+          <input
+          type="date"
+          placeholder="Due Date"
+          formControlName="dueDate"
+          id="dueDate"
+          class="form-control" />
+        </div>
+      </div>
+      <div class="form-class">
+        <select formControlName="priority" id="priority" name="status" placeholder="High">
+          <option value="priority" selected disabled>Priority</option>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+      </div>
+      <div class="form-class">
+        <select formControlName="status" id="status">
+          <option value="status" selected disabled>Status</option>
+          <option value="To Do">To Do</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Done">Done</option>
+        </select>
+      </div>
+      <div class="button-group">
+        <button [disabled]="!newTaskForm.valid" class="btn btn-success" type="submit">Add</button>
+        <button class="btn btn-danger" type="button" (click)="cancelAdd()">Cancel</button>
+      </div>
+
+    </form>
+  </div>
+</div>

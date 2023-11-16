@@ -43,6 +43,7 @@
            <div style="color: black;"class="task-list-headers list-items">{{ task.dueDate | date : "MM/dd" }}</div>
            <div style="color: black;" class="task-list-headers list-items">{{ task.priority }}</div>
            <div style="color: black;" class="task-list-headers list-items">{{ task.status }}</div>
+           <div style="color: black;" class="task-list-headers list-items">Action</div>
 
          </div>
        <!-- <table class="table"> -->
@@ -70,4 +71,4 @@
 
 <!-- task form modal  -->
 <!-- isOpenModal dictates if modal shows -->
-<app-task-form-modal *ngIf="!isOpenModal" (closeChild)="onOpenModal()"></app-task-form-modal>
+<app-task-form-modal *ngIf="isOpenModal" (closeChild)="onOpenModal()"></app-task-form-modal>
