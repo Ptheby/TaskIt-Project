@@ -54,6 +54,9 @@
   color: rgb(119, 117, 117);
   font-weight: 600;
 }
+.actions{
+  padding-left: o;padding-top: 0;justify-content:left;
+}
 /* .list-items {
   /* border: 1px solid darkgray; */
 
