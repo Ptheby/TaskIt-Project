@@ -60,6 +60,9 @@
 ul{
   display: flex;justify-content:left
 }
+.list-items{
+  padding-bottom: 0;margin-bottom: 0;
+}
 /* .list-items {
   /* border: 1px solid darkgray; */
 
