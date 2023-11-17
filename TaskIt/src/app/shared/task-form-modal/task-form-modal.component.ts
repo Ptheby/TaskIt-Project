@@ -22,7 +22,7 @@ export class TaskFormModalComponent implements OnInit {
   ngOnInit(): void {
     this.newTaskForm = new FormGroup({
       title: new FormControl(null, Validators.required),
-      description: new FormControl(null, Validators.required),
+      description: new FormControl(null, ),
       dueDate: new FormControl(null, Validators.required),
       priority: new FormControl(null, Validators.required),
       status: new FormControl(null, Validators.required),

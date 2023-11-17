@@ -24,8 +24,9 @@ addTask(newTask) {
 this.tasks.push(newTask)
 }
 
-deleteTask() {
-
+deleteTask(i) {
+this.tasks.splice(i);
+return this.tasks
 }
 
 updateTask() {

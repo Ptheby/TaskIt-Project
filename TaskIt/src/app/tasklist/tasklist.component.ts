@@ -10,6 +10,7 @@ import { TaskService } from '../shared/task.service';
   styleUrls: ['./tasklist.component.css'],
 })
 export class TasklistComponent implements OnInit {
+[x: string]: any;
   tasks: Task[] = [];
 
   constructor(private taskService: TaskService) {}
@@ -29,4 +30,10 @@ export class TasklistComponent implements OnInit {
   onOpenEdit(i) {
     this.isOpenEdit=true;
   }
+
+  deleteTask(i) {
+    this.tasks.splice(i,1);
+    return this.tasks
+    }
+
 }
