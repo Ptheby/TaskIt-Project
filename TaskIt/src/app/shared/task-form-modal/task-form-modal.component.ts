@@ -31,6 +31,7 @@ export class TaskFormModalComponent implements OnInit {
   onSubmit() {
     this.taskService.addTask(this.newTaskForm.value);
     console.log(this.newTaskForm.value);
+    this.closeChild.emit();
   }
 
   cancelAdd() {

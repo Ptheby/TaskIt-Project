@@ -5,7 +5,14 @@ import { Task } from '../tasklist/task.model';
   providedIn: 'root'
 })
 export class TaskService {
-tasks:Task[]=[]
+tasks:Task[]=[{
+ title: "title",
+ description : "description",
+ dueDate : new Date(),
+ priority : "priority",
+ status :"status",
+
+}]
   constructor() { }
 
   //read

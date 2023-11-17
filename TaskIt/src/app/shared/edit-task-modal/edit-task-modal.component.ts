@@ -27,6 +27,7 @@ export class EditTaskModalComponent {
   onSubmit() {
     this.taskService.addTask(this.newTaskForm.value);
     console.log(this.newTaskForm.value);
+    this.closeChild.emit();
   }
 
   cancelAdd() {

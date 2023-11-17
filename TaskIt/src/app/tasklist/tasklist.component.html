@@ -55,12 +55,12 @@
             {{ task.status }}
           </div>
           <div style="color: black" class="task-list-headers list-items actions">
-            <ul style="display:flex">
+            <ul>
               <li>
-                <span class="material-symbols-outlined"> delete_forever </span>
+               <span class="material-symbols-outlined"> delete_forever </span>
               </li>
               <li>
-                <span class="material-symbols-outlined">
+                <span class="material-symbols-outlined" (click)="onOpenEdit(i)">
                 edit
                 </span>
               </li>
@@ -101,5 +101,10 @@
       *ngIf="isOpenModal"
       (closeChild)="onOpenModal()"
     ></app-task-form-modal>
+
+<app-edit-task-modal
+    *ngIf="isOpenEdit"
+    (closeChild)= "isOpenEdit=false"
+   ></app-edit-task-modal>
   </div>
 </div>

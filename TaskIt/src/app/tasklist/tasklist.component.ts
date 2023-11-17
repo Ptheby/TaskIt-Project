@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from './task.model';
 import { TaskService } from '../shared/task.service';
-import { TaskFormModalComponent } from '../shared/task-form-modal/task-form-modal.component';
+
 
 @Component({
   selector: 'app-tasklist',
@@ -21,8 +21,12 @@ export class TasklistComponent implements OnInit {
 
   // properties
   isOpenModal: boolean = false;
+  isOpenEdit:boolean= false;
 
   onOpenModal() {
     this.isOpenModal = !this.isOpenModal;
+  }
+  onOpenEdit(i) {
+    this.isOpenEdit=true;
   }
 }
