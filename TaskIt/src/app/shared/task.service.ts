@@ -5,6 +5,7 @@ import { Task } from '../tasklist/task.model';
   providedIn: 'root'
 })
 export class TaskService {
+editTask:Task;
 tasks:Task[]=[{
  title: "title",
  description : "description",
@@ -29,11 +30,11 @@ this.tasks.splice(i);
 return this.tasks
 }
 
-updateTask() {
+updateTask(i) {
 
 }
-editOpenTask() {
-
+editOpenTask(task:Task) {
+this.editTask=task
 }
 
 

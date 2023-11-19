@@ -1,14 +1,16 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { TaskService } from 'src/app/shared/task.service';
+import { Task } from 'src/app/tasklist/task.model';
 
 @Component({
   selector: 'app-edit-task-modal',
   templateUrl: './edit-task-modal.component.html',
   styleUrls: ['./edit-task-modal.component.css']
 })
-export class EditTaskModalComponent {
+export class EditTaskModalComponent implements OnInit {
   @Output() closeChild: EventEmitter<void> = new EventEmitter<void>();
+  editTask:Task;
 
   newTaskForm: FormGroup = new FormGroup({});
   myDate = new Date();
@@ -17,7 +19,10 @@ export class EditTaskModalComponent {
 
 
 
-
+ngOnInit(): void {
+this.editTask=this.taskService.editTask
+console.log("fromModal",this.editTask)
+}
 
 
 

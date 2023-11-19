@@ -12,6 +12,7 @@ import { TaskService } from '../shared/task.service';
 export class TasklistComponent implements OnInit {
 [x: string]: any;
   tasks: Task[] = [];
+  editTask:Task;
 
   constructor(private taskService: TaskService) {}
 
@@ -28,7 +29,10 @@ export class TasklistComponent implements OnInit {
     this.isOpenModal = !this.isOpenModal;
   }
   onOpenEdit(i) {
+   this.taskService.editOpenTask(this.tasks[i])
     this.isOpenEdit=true;
+
+
   }
 
   deleteTask(i) {
