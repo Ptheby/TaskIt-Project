@@ -29,4 +29,13 @@
 .modal-content {
   background: #FFF;
   width: 50vw;
+  height: 35vh;
+  display: flex;
+
+
 }
+
+/* .modal-header{
+  padding-left: 3%;
+} */
+

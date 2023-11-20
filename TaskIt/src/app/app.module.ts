@@ -12,6 +12,9 @@ import { KanbanBoardComponent } from './kanban-board/kanban-board.component';
 import { RouterModule } from '@angular/router';
 import { EditTaskModalComponent } from './shared/edit-task-modal/edit-task-modal.component';
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +23,8 @@ import { EditTaskModalComponent } from './shared/edit-task-modal/edit-task-modal
     TaskFormModalComponent,
     KanbanBoardComponent,
     EditTaskModalComponent,
+
+
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule, RouterModule],
   providers: [],
