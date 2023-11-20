@@ -37,3 +37,6 @@ h3 {
 .kanban {
 margin-top: 18px;
 }
+.profile-info{
+  position: absolute;bottom: 5px;
+}
