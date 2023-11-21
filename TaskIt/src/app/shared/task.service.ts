@@ -26,9 +26,10 @@ this.tasks.push(newTask)
 }
 
 deleteTask(i) {
+  if(window.confirm("Are you sure you want to delete?"+i)) {
 this.tasks.splice(i);
 return this.tasks
-}
+}else {return this.tasks}}
 
 updateTask(i) {
 
